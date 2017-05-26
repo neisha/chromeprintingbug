@@ -1,16 +1,102 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
 
-  <title>Chrome Printing Bug</title>
-  <meta name="description" content="Reproduction of Chrome Printing Bug">
-  <meta name="author" content="nchadwick@p2es.com">
+<head>
+    <meta charset="utf-8">
+
+    <title>Chrome Printing Bug</title>
+    <meta name="description" content="Reproduction of Chrome Printing Bug">
+    <meta name="author" content="nchadwick@p2es.com">
+
+    <link rel="stylesheet" href="./style.css" />
 
 </head>
 
 <body>
-    <p>Body text</p>
+    <ng-include ng-if="!display.isStudioMode" src="display.SourcePath" class="display-page ng-scope" style="">
+        <ex-display class="ng-scope">
+            <div class="ex-display" ng-style="pageStyle">
+                <div class="display-instance base-display ng-scope" ex-test-printing="" id="ui-id-1">
+                    <div class="printing-container"></div>
+                    <ex-grid-layout column-spacing="'0'" row-spacing="'0'" class="grid-layout ng-scope">
+                        <ex-grid-cell row="'0'" column="'0'" colspan="'1'" rowspan="'1'" class="grid-layout__cell" style="order: 0; margin: 0px; width: 33.3333%; height: 33.3333%;">
+                            <ex-simple-line type="'Left-Top Corner'" colour="'black'" thickness="'2'" class="ng-scope">
+                                <svg>
+                                    <line stroke="black" stroke-width="2" x1="0" x2="319" y1="135" y2="135"></line>
+                                    <line stroke="black" stroke-width="2" x1="319" x2="319" y1="0" y2="135"></line>
+                                </svg>
+                            </ex-simple-line>
+                        </ex-grid-cell>
+                        <ex-grid-cell row="'0'" column="'1'" colspan="'1'" rowspan="'1'" class="grid-layout__cell" style="order: 1; margin: 0px; width: 33.3333%; height: 33.3333%;">
+                            <ex-simple-line type="'Left-Top Corner'" colour="'black'" thickness="'2'" class="ng-scope">
+                                <svg>
+                                    <line stroke="black" stroke-width="2" x1="0" x2="319" y1="135" y2="135"></line>
+                                    <line stroke="black" stroke-width="2" x1="319" x2="319" y1="0" y2="135"></line>
+                                </svg>
+                            </ex-simple-line>
+                        </ex-grid-cell>
+                        <ex-grid-cell row="'0'" column="'2'" colspan="'1'" rowspan="'1'" class="grid-layout__cell" style="order: 2; margin: 0px; width: 33.3333%; height: 33.3333%;">
+                            <ex-simple-line type="'Left-Top Corner'" colour="'black'" thickness="'2'" class="ng-scope">
+                                <svg>
+                                    <line stroke="black" stroke-width="2" x1="0" x2="319" y1="135" y2="135"></line>
+                                    <line stroke="black" stroke-width="2" x1="319" x2="319" y1="0" y2="135"></line>
+                                </svg>
+                            </ex-simple-line>
+                        </ex-grid-cell>
+                        <ex-grid-cell row="'1'" column="'0'" colspan="'1'" rowspan="'1'" class="grid-layout__cell" style="order: 3; margin: 0px; width: 33.3333%; height: 33.3333%;">
+                            <ex-simple-line type="'Left-Top Corner'" colour="'black'" thickness="'2'" class="ng-scope">
+                                <svg>
+                                    <line stroke="black" stroke-width="2" x1="0" x2="319" y1="135" y2="135"></line>
+                                    <line stroke="black" stroke-width="2" x1="319" x2="319" y1="0" y2="135"></line>
+                                </svg>
+                            </ex-simple-line>
+                        </ex-grid-cell>
+                        <ex-grid-cell row="'1'" column="'1'" colspan="'1'" rowspan="'1'" class="grid-layout__cell" style="order: 4; margin: 0px; width: 33.3333%; height: 33.3333%;">
+                            <ex-simple-line type="'Left-Top Corner'" colour="'black'" thickness="'2'" class="ng-scope">
+                                <svg>
+                                    <line stroke="black" stroke-width="2" x1="0" x2="319" y1="135" y2="135"></line>
+                                    <line stroke="black" stroke-width="2" x1="319" x2="319" y1="0" y2="135"></line>
+                                </svg>
+                            </ex-simple-line>
+                        </ex-grid-cell>
+                        <ex-grid-cell row="'1'" column="'2'" colspan="'1'" rowspan="'1'" class="grid-layout__cell" style="order: 5; margin: 0px; width: 33.3333%; height: 33.3333%;">
+                            <ex-simple-line type="'Left-Top Corner'" colour="'black'" thickness="'2'" class="ng-scope">
+                                <svg>
+                                    <line stroke="black" stroke-width="2" x1="0" x2="319" y1="135" y2="135"></line>
+                                    <line stroke="black" stroke-width="2" x1="319" x2="319" y1="0" y2="135"></line>
+                                </svg>
+                            </ex-simple-line>
+                        </ex-grid-cell>
+                        <ex-grid-cell row="'2'" column="'0'" colspan="'1'" rowspan="'1'" class="grid-layout__cell" style="order: 6; margin: 0px; width: 33.3333%; height: 33.3333%;">
+                            <ex-simple-line type="'Left-Top Corner'" colour="'black'" thickness="'2'" class="ng-scope">
+                                <svg>
+                                    <line stroke="black" stroke-width="2" x1="0" x2="319" y1="135" y2="135"></line>
+                                    <line stroke="black" stroke-width="2" x1="319" x2="319" y1="0" y2="135"></line>
+                                </svg>
+                            </ex-simple-line>
+                        </ex-grid-cell>
+                        <ex-grid-cell row="'2'" column="'1'" colspan="'1'" rowspan="'1'" class="grid-layout__cell" style="order: 7; margin: 0px; width: 33.3333%; height: 33.3333%;">
+                            <ex-simple-line type="'Left-Top Corner'" colour="'black'" thickness="'2'" class="ng-scope">
+                                <svg>
+                                    <line stroke="black" stroke-width="2" x1="0" x2="319" y1="135" y2="135"></line>
+                                    <line stroke="black" stroke-width="2" x1="319" x2="319" y1="0" y2="135"></line>
+                                </svg>
+                            </ex-simple-line>
+                        </ex-grid-cell>
+                        <ex-grid-cell row="'2'" column="'2'" colspan="'1'" rowspan="'1'" class="grid-layout__cell" style="order: 8; margin: 0px; width: 33.3333%; height: 33.3333%;">
+                            <ex-simple-line type="'Left-Top Corner'" colour="'black'" thickness="'2'" class="ng-scope">
+                                <svg>
+                                    <line stroke="black" stroke-width="2" x1="0" x2="319" y1="135" y2="135"></line>
+                                    <line stroke="black" stroke-width="2" x1="319" x2="319" y1="0" y2="135"></line>
+                                </svg>
+                            </ex-simple-line>
+                        </ex-grid-cell>
+                    </ex-grid-layout>
+                </div>
+            </div>
+        </ex-display>
+    </ng-include>
 </body>
+
 </html>

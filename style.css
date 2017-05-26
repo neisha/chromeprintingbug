@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+.display-page {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+ex-display {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.ex-display {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: auto;
+}
+
+.ex-display > .display-instance {
+    min-height: 0;
+    min-width: 0;
+}
+
+.base-display {
+    z-index: 0;
+}
+
+.printing-container {
+    opacity: 0;
+    position: absolute;
+    display: none;
+}
+
+.grid-layout {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-layout__cell {
+    display: block;
+    position: relative;
+}
+
+.grid-layout__cell {
+    border: 1px solid blue;
+}
+
+ex-simple-line {
+    display: block;
+    height: 100%;
+}
+
+ex-simple-line svg {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+/* Print css */
+.display-instance.base-display {
+    transform: scale(0.5) !important;
+    transform-origin: top left !important;
+    width: 1920px !important;
+    height: 815px !important;
+}
